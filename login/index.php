@@ -8,7 +8,7 @@
 </head>
 <body>
 	
-	<h1><strong>Login</strong></h1>
+	<h1><strong>asdasdasdasdasdasdsaLogin</strong></h1>
 	<form action="login.php" method="POST"> 
 		<table id="mytable">
 			<tr>

@@ -94,7 +94,11 @@ echo "</table>";
 ?>
 <div>
 <form>
+	
 	<input type="submit" name="map" value="MAP">
+	<?php
+	header("Location: map.php");
+	?>
 </div>
 </form>
 </div>
