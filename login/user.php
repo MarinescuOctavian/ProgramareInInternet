@@ -11,16 +11,18 @@
 
 	</div>
 
-	<div class="tabellatitudini">
-		<table width='300px' height='300px' padding-left='20px' border='1'>";
-			<th>ID</th>
+	<div class="table">
+	<table width='300px' height='300px' padding-left='20px' border='1'>";
+			<th>Nume</th>
 			<th>Latitudine</th>
 			<th>Longitudine</th>
-		<?php
+			<th>Culoare</th>
+			<th>Dimensiune</th>
+<?php
 $conn=mysqli_connect("localhost", "root", "") or die(mysqli_error());
-mysqli_select_db($conn, "pai");
+mysqli_select_db($conn, "pai1");
 
-$sql_read = "SELECT * FROM locatii";
+$sql_read = "SELECT * FROM locatii2";
 
 $result = mysqli_query($conn, $sql_read);
 if(! $result )
@@ -28,14 +30,26 @@ if(! $result )
   die('Could not read data: ' . mysqli_error());
 }
 while($row = mysqli_fetch_array($result)) {
-	$id = $row['ID'];
+	$name = $row['Nume'];
 	$lat = $row['Latitudine'];
 	$long = $row['Longitudine'];
-	echo '<tr><td>' .$id . '</td><td>' . $lat . '</td><td>' . $long . '</td></tr>' . "<br>\n";
+	$cul=$row['Culoare'];
+	$dim=$row['Dimensiune'];
+	echo '<tr><td>' .$name . '</td><td>' .$lat . '</td><td>' .$long . '</td><td>' .$cul .  '</td><td>' .$dim . '</td><tr>' . "<br> \n";
 }
 echo "</table>";
-?>
 
-	</div>
+?>
+</div>
+<div>
+<form>
+	
+	<input type="button" value="MAP" onclick="location='MAP.php'" />
+	<?php
+	
+
+	?>
+</form>
+</div>
 </body>
 </html>	

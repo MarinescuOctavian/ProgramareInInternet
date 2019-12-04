@@ -8,7 +8,7 @@
 </head>
 <body>
 	
-	<h1><strong>asdasdasdasdasdasdsaLogin</strong></h1>
+	<h1><strong>Login</strong></h1>
 	<form action="login.php" method="POST"> 
 		<table id="mytable">
 			<tr>
@@ -25,7 +25,7 @@
 		<td><input type="password" name="password" placeholder="Password"><br><br> </td>
 			</tr>
 			<tr>
-		<td><input type="submit" name="login" value="Login"><br><br> </td>
+		<td><input type="submit" value="Login" ><br><br> </td>
 			</tr>
 		</table>
 		</form>

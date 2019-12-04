@@ -95,10 +95,8 @@ echo "</table>";
 <div>
 <form>
 	
-	<input type="submit" name="map" value="MAP">
-	<?php
-	header("Location: map.php");
-	?>
+	<input type="button" value="MAP" onclick="location='MAP.php'" />
+
 </div>
 </form>
 </div>
