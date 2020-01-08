@@ -39,14 +39,15 @@
 
 $conn=mysqli_connect("localhost", "root", "") or die(mysqli_error());
 mysqli_select_db($conn, "pai1");
-
-	$name = $_POST['nume'];
-	$lat = $_POST['latitudine'];
-	$long = $_POST['longitudine'];
-	$cul= $_POST['culoare'];
-	$dim= $_POST['dimensiune'];
+if (isset($_POST['name'], $_POST['lat'], $_POST['long'], $_POST['cul'], $_POST['dim'])){	
+	$name = $_POST['name'];
+	$lat = $_POST['lat'];
+	$long = $_POST['long'];
+	$cul= $_POST['cul'];
+	$dim= $_POST['dim'];
+}
 	if(!empty($name) && !empty($lat) && !empty($long) && !empty($cul) && !empty($dim)){
-$sql_insert="INSERT INTO locatii2 (nume, latitudine, longitudine, culoare, dimensiune) VALUES ('$name', '$lat', '$long', '$cul', '$dim')";
+$sql_insert="INSERT INTO locatii2 (name, lat, long, cul, dim) VALUES ('$name', '$lat', '$long', '$cul', '$dim')";
 
 $retval = mysqli_query($conn, $sql_insert);
 if(! $retval )
