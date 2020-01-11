@@ -5,13 +5,48 @@
 	<meta charset="UTF-8">
 	<title>Bun venit pe pagina de Admin</title>
 </head>
+
+<style type="text/css">
+
+#top{
+	position: relative;
+	top: 40px
+	right: 700px;
+	width: 1700px;
+  
+  max-width: 360px;
+  margin: 0 auto 100px;
+
+  
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.2), 0 0px 25px 0 rgba(0, 0, 0, 0.5);
+}
+
+#tat{	
+margin: 50px 0 0;
+  font-size: 30px;
+position: relative;
+top: 0
+right: 200px;
+width:200px;
+
+}
+
+#test{
+
+
+width: 1250px;
+}
+
+
+</style>
+
 <body>
-		<div>
+		<div id="top">
 
 			<h1> BUN VENIT PE PAGINA Adminilor</h1>
 		</div>
 
-		<div>
+		<div id="tat">
 
 			<form method="POST">
 				<table>
@@ -34,6 +69,7 @@
 				<td><input type="submit" name="refacere" value="submit"></td>
 			</tr>
 		</table>
+		</div>
 		<div>
 <?php
 
@@ -93,7 +129,7 @@ while($row = mysqli_fetch_array($result)) {
 echo "</table>";
 
 ?>
-<div>
+<div id="test">
 <form>
 	
 	<input type="button" value="MAP" onclick="location='MAP.php'" />

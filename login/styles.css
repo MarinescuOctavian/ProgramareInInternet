@@ -1,5 +1,5 @@
 html{
-background:url('exemplu.png');
+background:url('exemplu1.png');
  background-repeat: no-repeat;
  background-position: center center; /*horizontal
 and vertically centered*/
@@ -11,9 +11,9 @@ text-align: center;
  color: black;
 }
 input{
-margin-top: 0.5em;
+margin-top: 1em;
  outline: none;
- padding: 0.75em;
+ padding: 1.25em;
  border: none;
  min-width: 30%}
 form{
