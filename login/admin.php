@@ -137,6 +137,12 @@ echo "</table>";
 </div>
 </form>
 </div>
-    
+<div>
+ <form>
+	
+	<input type="button" value="Matrix" onclick="location='matrix.php'" />
+
+</form>   
+</div>
 </body>
 </html>
