@@ -1,0 +1,8 @@
+html{
+background:url('exemplu.png');
+ background-repeat: no-repeat;
+ background-position: center center; /*horizontal
+and vertically centered*/
+ background-size: cover;
+ min-height: 100%;
+}

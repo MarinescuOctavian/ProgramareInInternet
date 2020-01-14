@@ -5,13 +5,53 @@
 	<meta charset="UTF-8">
 	<title>Bun venit utilizatorule</title>
 </head>
+
+<style type="text/css">
+
+#top{
+	 position:absolute;
+    transition: .5s ease;
+    top: 3%;
+    left: 40%;
+  
+  max-width: 360px;
+  margin: 0 auto 100px;
+
+  
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.2), 0 0px 25px 0 rgba(0, 0, 0, 0.5);
+}
+
+#raaa{
+	 position:absolute;
+    transition: .5s ease;
+    top:10%;
+    left: 2%;
+}
+
+#test{
+
+position:absolute;
+    transition: .5s ease;
+    top:50%;
+    left: 10%;
+}
+
+
+}
+
+
+
+
+</style>
+
+
 <body>
-	<div>
+	<div id="top">
 		<h1>Bun venit utilizatorule</h1>
 
 	</div>
 
-	<div class="table">
+	<div id="raaa" class="table">
 	<table width='300px' height='300px' padding-left='20px' border='1'>";
 			<th>Nume</th>
 			<th>Latitudine</th>
@@ -41,7 +81,7 @@ echo "</table>";
 
 ?>
 </div>
-<div>
+<div id="test">
 <form>
 	
 	<input type="button" value="MAP" onclick="location='MAP.php'" />

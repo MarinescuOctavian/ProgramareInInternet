@@ -37,6 +37,16 @@ width:200px;
 width: 1250px;
 }
 
+#test1{
+
+ position:absolute;
+    transition: .5s ease;
+    top: 100%;
+    left: 73%;
+}
+
+
+
 
 </style>
 
@@ -54,16 +64,16 @@ width: 1250px;
 				<td><input type="text" name="nume" placeholder="Introduceti numele"></td>
 			</tr>
 			<tr>
-				<td><input type="VALUES" name="latitudine" placeholder="Introduceti latitudinea"></td>
+				<td><input type="VALUES" name="lat" placeholder="Introduceti latitudinea"></td>
 			</tr>
 			<tr>
-				<td><input type="VALUES" name="longitudine" placeholder="Introduceti longitudinea"></td>
+				<td><input type="VALUES" name="long" placeholder="Introduceti longitudinea"></td>
 			</tr>
 			<tr>
-				<td><input type="VALUES" name="culoare" placeholder="Introduceti culoarea"></td>
+				<td><input type="VALUES" name="cul" placeholder="Introduceti culoarea"></td>
 			</tr>
 			<tr>
-				<td><input type="VALUES" name="dimensiune" placeholder="Introduceti dimensiunea"></td>
+				<td><input type="VALUES" name="dim" placeholder="Introduceti dimensiunea"></td>
 			</tr>
 			<tr>
 				<td><input type="submit" name="refacere" value="submit"></td>
@@ -83,7 +93,7 @@ if (isset($_POST['name'], $_POST['lat'], $_POST['long'], $_POST['cul'], $_POST['
 	$dim= $_POST['dim'];
 }
 	if(!empty($name) && !empty($lat) && !empty($long) && !empty($cul) && !empty($dim)){
-$sql_insert="INSERT INTO locatii2 (name, lat, long, cul, dim) VALUES ('$name', '$lat', '$long', '$cul', '$dim')";
+$sql_insert="INSERT INTO locatii2 (Nume, Latitudine, Longitudine, Culoare, Dimensiune) VALUES ('$name', '$lat', '$long', '$cul', '$dim')";
 
 $retval = mysqli_query($conn, $sql_insert);
 if(! $retval )
@@ -137,7 +147,7 @@ echo "</table>";
 </div>
 </form>
 </div>
-<div>
+<div id="test1">
  <form>
 	
 	<input type="button" value="Matrix" onclick="location='matrix.php'" />
