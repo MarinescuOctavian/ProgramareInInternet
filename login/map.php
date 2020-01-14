@@ -1,4 +1,10 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
+<?php
+ if($_SESSION['loggedIn']){
+    ?>
 <html>
 
 <head>
@@ -49,5 +55,10 @@
  
 
 </body>
+<?php
+}
 
+ else
+      header('Location: /login/index.php'); 
+  ?>
 </html>

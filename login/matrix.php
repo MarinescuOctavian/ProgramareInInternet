@@ -1,5 +1,10 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
-
+<?php
+ if($_SESSION['loggedIn']){
+    ?>
 <head>
 	<link rel="stylesheet" type="text/css" href="styles2.css">
 </head>
@@ -117,4 +122,10 @@ width: 380px;
         	
 
     </body>
+    <?php
+}
+
+ else
+      header('Location: /login/index.php'); 
+  ?>
 </html>

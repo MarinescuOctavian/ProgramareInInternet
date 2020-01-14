@@ -1,4 +1,5 @@
 <?php
+session_start();
 require 'ceva.php'; //contectarea la baza de date
 
 	$type=$_POST['type'];
@@ -14,6 +15,8 @@ while($rand=$rezultat->fetch_assoc()) //preia coloanele intr-un array
 {
 	if($rand['username'] == $username && $rand['password'] == $password && $rand['type'] == 'Admin') //verificare array
 	{
+
+		$_SESSION['loggedIn'] = true;
 		header("Location: admin.php"); //muta in pagina admin.php
 		exit;
 	}else if ($rand['username'] == $username && $rand['password'] == $password && $rand['type'] == 'User'){
