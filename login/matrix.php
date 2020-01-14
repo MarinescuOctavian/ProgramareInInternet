@@ -77,6 +77,18 @@ width: 380px;
             array_push($arr, $rez);
             array_push($arr2, $name);
              }
+
+             $number= $result->num_rows;
+             if ($number != 10){
+                 echo 'Va rugam introduceti EXACT 10 orase!';
+                exit;
+            
+
+            }
+              
+             
+
+
            echo "<table border='1'>";
                         for ($i=0; $i <= 10; $i++) { 
                 echo "<tr>";
