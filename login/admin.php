@@ -61,7 +61,7 @@ width: 1250px;
 			<form method="POST">
 				<table>
 			<tr>
-				<td><input type="text" name="nume" placeholder="Introduceti numele"></td>
+				<td><input type="text" name="name" placeholder="Introduceti numele"></td>
 			</tr>
 			<tr>
 				<td><input type="VALUES" name="lat" placeholder="Introduceti latitudinea"></td>
